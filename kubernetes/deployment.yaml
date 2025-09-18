@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-node-postgres-app
-        image: <ECR_URI>/my-node-postgres-app:latest
+        image: 329599640344.dkr.ecr.us-east-1.amazonaws.com/my-node-postgres-app:latest
         ports:
         - containerPort: 5000
         env:
@@ -31,3 +31,4 @@ spec:
                 key: postgres-password
           - name: DB_PORT
             value: "5432"
+
