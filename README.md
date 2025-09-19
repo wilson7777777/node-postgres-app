@@ -42,3 +42,11 @@ This is a **full-stack web application** that demonstrates a complete **DevOps w
 ## 🚀 Getting Started
 
 To get this project running, you will need access to a Kubernetes cluster configured to work with AWS
+
+## 🌐 Live Application & Database Endpoints
+
+Based on your `kubectl get service` output, your application and database services are running. You can access the front-end and test the API endpoints using the links below.
+
+-   **Application URL**: [http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com](http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com)
+-   **Get Data API**: [http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com/get-data](http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com/get-data)
+-   **Add Data API**: [http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com/add-data?name=MyData&value=123](http://adcf3ca548903479992474a3fa82d16f-1325604658.us-east-1.elb.amazonaws.com/add-data?name=MyData&value=123)
