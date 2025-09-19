@@ -41,7 +41,46 @@ This is a **full-stack web application** that demonstrates a complete **DevOps w
 
 ## 🚀 Getting Started
 
-To get this project running, you will need access to a Kubernetes cluster configured to work with AWS
+To get this project running, you will need access to a Kubernetes cluster configured to work with AWS EKS. The following steps replicate the project's setup from scratch.
+
+### Project Structure
+
+You created a clear file structure to organize the application, its front-end, Kubernetes manifests, and CI/CD pipeline.
+
+### Steps to Deploy
+
+1.  **Initialize Git & Create Remote Repository**: You initialized a local Git repository and connected it to your GitHub repository.
+
+    ```bash
+    git init
+    git remote add origin [https://github.com/wilson7777777/node-postgres-app.git](https://github.com/wilson7777777/node-postgres-app.git)
+    ```
+
+2.  **Create AWS ECR Repository**: You created a private repository on AWS Elastic Container Registry (ECR) to store your Docker images.
+
+    ```bash
+    aws ecr create-repository --repository-name my-node-postgres-app --region us-east-1
+    ```
+
+3.  **Apply Kubernetes Manifests**: You used `kubectl apply` to create the Kubernetes resources for your PostgreSQL database and the Node.js application.
+
+    ```bash
+    kubectl apply -f kubernetes/postgres-secret.yaml
+    kubectl apply -f kubernetes/postgres-deployment.yaml
+    kubectl apply -f kubernetes/postgres-service.yaml
+    kubectl apply -f kubernetes/deployment.yaml
+    kubectl apply -f kubernetes/service.yaml
+    ```
+
+4.  **Push Code to GitHub**: All your code and configuration files were committed and pushed to GitHub, triggering the CI/CD pipeline (if configured).
+
+    ```bash
+    git add .
+    git commit -m "feat: Initial project setup"
+    git push -u origin master
+    ```
+
+***
 
 ## 🌐 Live Application & Database Endpoints
 
