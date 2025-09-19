@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const { Pool } = require('pg');
 
 const app = express();
@@ -55,6 +56,8 @@ app.get('/get-data', async (req, res) => {
     res.status(500).send(`Error retrieving data: ${err.message}`);
   }
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
